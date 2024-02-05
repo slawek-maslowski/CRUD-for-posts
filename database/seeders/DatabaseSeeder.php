@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Post;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
@@ -19,5 +20,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'Slawek',
             'email' => 'admin@admin.com',
         ]);
+
+        $this->call(PostSeeder::class);
     }
 }
